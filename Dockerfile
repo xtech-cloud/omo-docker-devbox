@@ -3,11 +3,11 @@
 # OMO DevBox
 #
 # ENV: DEV
-# VERSION: 1.0.0
+# VERSION: 3.10
 #
 # *************************************
 
-FROM alpine:3.7
+FROM alpine:3.10
 
 MAINTAINER Easlee Liu "liu@easlee.me"
 
