@@ -3,13 +3,13 @@
 # OMO DevBox
 #
 # ENV: DEV
-# VERSION: 3.10
+# VERSION: 3.11
 #
 # *************************************
 
-FROM alpine:3.10
+FROM alpine:3.11
 
-MAINTAINER Easlee Liu "liu@easlee.me"
+MAINTAINER Easlee Liu "easlee@outlook.com"
 
 ENV container docker
 
@@ -19,26 +19,17 @@ VOLUME /share
 ###############################
 # install applications
 ###############################
-RUN apk add --no-cache openssh
 RUN apk add --no-cache sudo
 RUN apk add --no-cache perl
 RUN apk add --no-cache bash
+RUN apk add --no-cache openssh
 RUN apk add --no-cache ca-certificates
 RUN apk add --no-cache curl
 
 RUN apk add --no-cache alpine-sdk
 RUN apk add --no-cache git
 RUN apk add --no-cache vim
-RUN apk add --no-cache redis
-RUN apk add --no-cache mysql
-RUN apk add --no-cache mysql-client
-RUN apk add --no-cache mongodb
 RUN apk add --no-cache go
-
-###############################
-# activate systemd
-###############################
-VOLUME [ "/sys/fs/cgroup" ]
 
 ###############################
 # generate ssh key
